@@ -1,12 +1,11 @@
 """
-Script que captura Imagen, Titulo, Desscripcion y Precio de un producto de Mercado Libre
+Script que captura Imagen, Titulo y Precio de productos de Mercado Libre
 y lo guarda en un archivo excel
 """
 
 from time import sleep
 from requests_html import HTMLSession
 import pandas as pd
-
 from PIL import Image
 import requests
 from io import BytesIO
