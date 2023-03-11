@@ -10,7 +10,7 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-#URL de la busqueda de MercadoLibre
+#URL de la busqueda de MercadoLibre (puedes cambiarla por la que quieras)
 url = "https://listado.mercadolibre.com.ve/televisor#D[A:televisor]"
 
 session = HTMLSession()
@@ -27,7 +27,7 @@ def verificarSrc(producto):
 def toExcel(imagenes, titulos, precios):
     #Creamos un diccionario con los datos
     data = {
-        "Imagene": imagenes,
+        "Imagenes": imagenes,
         "Titulo": titulos,
         "Precio": precios
     }
@@ -77,7 +77,7 @@ def capturar(ml):
         titulos.append(titulo)
         precio = producto.find(".price-tag-fraction")[0].text + "$"
         precios.append(precio)
-        print(imagen, titulo, precio)
+        # print(imagen, titulo, precio)
 
     
     toExcel(imagenes, titulos, precios)
